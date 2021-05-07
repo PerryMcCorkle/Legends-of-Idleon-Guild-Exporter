@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <title>Legends of Idleon Guild Exporter 1.0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -12,14 +13,37 @@ Tested on Legends of Idleon 1.14 for Chrome and Firefox<br>
 WARNING: These instructions create a Bookmarklet to execute code in your browser.<br>
 Make sure you understand any code before you execute it.<br>
 <br>
-First time setup:<br>
+First time setup: (Click a step to see screenshots)<br>
+
 <p style="margin-left: 10px">
-1. If the bookmarks bar isn't showing, Press Ctrl+Shift+B to show it<br>
-2. Drag the "Export Guild" link below into the bookmarks bar<br></p>
+
+<details>
+  <summary>1. If the bookmarks bar isn't showing, Press Ctrl+Shift+B to show it </summary>
+  <br>If you can't see your bookmarks below the address bar<br>
+  <img src="Setup 1a.png"><br>
+  Press Ctrl+Shift+B to show them<br>
+  <img src="Setup 1b.png"><br>
+</details>
+
+<details>
+  <summary>2. Drag the "Export Guild" link below into the bookmarks bar</summary>
+  <br>
+  <img src="Setup 2a.png"><br>
+  <img src="Setup 2b.png"><br>
+  <img src="Setup 2c.png"><br>
+</details></p>
 <br>
 To use:<br><p style="margin-left: 10px">
-1. Play a character<br>
-2. Click the "Export Guild" bookmark created in First time setup<br></p>
+<details>
+  <summary>1. Play a character</summary>
+  <br>
+  <img src="Use 1.png"><br>
+</details>
+<details>
+  <summary>2. Click the "Export Guild" bookmark created in First time setup</summary>
+  <br>
+  <img src="Use 2.png"><br>
+</details>
 </p>
   <br>
   <a href="javascript:/* Legends of Idleon Guild Exporter by Sans#2009
@@ -60,10 +84,8 @@ To use:<br><p style="margin-left: 10px">
 		downloadLink.href = window.URL.createObjectURL(csvFile);
 		downloadLink.style.display = &quot;none&quot;;
 		document.body.appendChild(downloadLink);
-
 		downloadLink.click();
 	}
-
 	function buildCSV(guild)
 	{
 		var csv = &quot;&quot;;
@@ -72,7 +94,6 @@ To use:<br><p style="margin-left: 10px">
 			
 		return csv;
 	}
-
 	function isReady()
 	{
 		if (typeof xn == &quot;undefined&quot;)
@@ -95,7 +116,6 @@ To use:<br><p style="margin-left: 10px">
 		
 		return true;
 	}
-
 	if (isReady())
 		downloadCSV(buildCSV(xn), bn.n + &quot; &quot; + new Date().toLocaleDateString() + &quot;.csv&quot;);
 	
